@@ -1,6 +1,7 @@
 
-export default class Logger {
-
+export class Logger {
+    title = {};
+    body = {};
     constructor(title) {
 
         this.title = {
@@ -29,7 +30,7 @@ export default class Logger {
 
     log(body = '') {
         console.log(
-            `%c${this.title.body} | ${body}`,
+            `%c${this.title.body} | %c${body}`,
             `color: ${this.title.color}; 
             font-weight: bold; 
             font-size: ${this.title.size};

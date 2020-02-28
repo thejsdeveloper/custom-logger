@@ -1,14 +1,13 @@
 // Import stylesheets
-import './style.css';
+import "./style.css";
 
-import Logger from './logger/logger';
+import { Logger } from "./logger/logger";
 
 // Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById('app');
+const appDiv: HTMLElement = document.getElementById("app");
 appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
 
+const logger = new Logger();
+const log = logger.log.bind(logger);
 
-const log = new Logger().log;
-
-log(`Welcome to New Logger`)
-
+log(`Welcome to New Logger`);
